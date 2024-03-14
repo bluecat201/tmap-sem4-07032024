@@ -13,11 +13,13 @@ class MainActivity : ComponentActivity() {
         val intent = Intent(this, SecondActivity::class.java)
         startActivity(intent)
     }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.main_activity)
         Log.d("MainActivity","MainActivity: onCreate")
     }
+
     override fun onStart() {
         super.onStart()
         Log.d("MainActivity", "MainActivity: onStart")

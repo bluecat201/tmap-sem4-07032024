@@ -8,18 +8,26 @@ import android.widget.CheckBox
 import android.widget.EditText
 import androidx.activity.ComponentActivity
 import android.view.View
+import android.widget.Toast
 
 class SecondActivity : ComponentActivity() {
+
+    private var name: String = ""
+    private var dob: String = ""
+    private var checkBoxChecked: Boolean = false
     fun onSubmitButtonClick(view: View) {
         val name = findViewById<EditText>(R.id.nameEditText).text.toString()
-        val dob = findViewById<EditText>(R.id.dobEditText).text.toString()
+        val dob = findViewById<EditText>(R.id.editTextDate).text.toString()
         val checkBox = findViewById<CheckBox>(R.id.checkBox)
 
         if(name.isNotEmpty() && dob.isNotEmpty() && checkBox.isChecked){
             val intent = Intent(this, ThirdActivity::class.java)
             intent.putExtra("name",name)
             intent.putExtra("dob",dob)
+            setResult(RESULT_OK, intent)
             startActivity(intent)
+        } else {
+            Toast.makeText(this, "Pole jsou prázdná nebo není zaškrtnutý souhlas", Toast.LENGTH_LONG).show()
         }
     }
     override fun onCreate(savedInstanceState: Bundle?) {

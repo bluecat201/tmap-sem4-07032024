@@ -17,8 +17,8 @@ class ThirdActivity : ComponentActivity() {
         val nameTextView = findViewById<TextView>(R.id.nameTextView)
         val dobTextView = findViewById<TextView>(R.id.dobTextView)
 
-        nameTextView.text = "$name"
-        dobTextView.text = "$dob"
+        nameTextView.text = "Jméno: $name"
+        dobTextView.text = "Datum narození: $dob"
     }
 
     override fun onStart() {

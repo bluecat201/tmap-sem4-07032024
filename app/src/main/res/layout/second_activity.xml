@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -9,16 +10,17 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
+        android:hint="Jméno:"
         android:inputType="text"
-        android:text="Jméno:" />
+        android:textAppearance="@android:style/TextAppearance.Material.Body1" />
 
     <EditText
-        android:id="@+id/dobEditText"
+        android:id="@+id/editTextDate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:inputType="text"
-        android:text="Datum narození:" />
+        android:hint="Datum narození:"
+        android:inputType="date" />
 
     <CheckBox
         android:id="@+id/checkBox"
@@ -32,4 +34,5 @@
         android:layout_height="wrap_content"
         android:onClick="onSubmitButtonClick"
         android:text="Submit" />
+
 </LinearLayout>
