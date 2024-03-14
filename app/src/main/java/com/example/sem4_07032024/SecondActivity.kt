@@ -12,9 +12,6 @@ import android.widget.Toast
 
 class SecondActivity : ComponentActivity() {
 
-    private var name: String = ""
-    private var dob: String = ""
-    private var checkBoxChecked: Boolean = false
     fun onSubmitButtonClick(view: View) {
         val name = findViewById<EditText>(R.id.nameEditText).text.toString()
         val dob = findViewById<EditText>(R.id.editTextDate).text.toString()
